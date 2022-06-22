@@ -1,0 +1,81 @@
+*,*:hover{
+    outline: none;
+    transition: ease-in-out 100ms;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, main, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+ul>li, ol>li {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+li{
+    list-style: none none;
+    text-decoration: none;
+}
+a,a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+h1, h2, h3, h4, .heading-6, h5, h6 {
+    text-transform: uppercase;
+}
+.abs-account-blocks .block-title, .block-giftregistry-results .block-title, .block-giftregistry-shared-items .block-title, .block-wishlist-search-results .block-title, .block-reorder .block-title, .block.related .block-title, .block.upsell .block-title, .block.crosssell .block-title, .widget .block-title, .multicheckout .block-title, .paypal-review .block .block-title, .magento-rma-guest-returns .column.main .block:not(.widget) .block-title, [class^=sales-guest-] .column.main .block:not(.widget) .block-title, .sales-guest-view .column.main .block:not(.widget) .block-title, .account .column.main .block:not(.widget) .block-title {
+    margin-bottom: 23px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.abs-account-blocks .block-title>strong, .block-giftregistry-results .block-title>strong, .block-giftregistry-shared-items .block-title>strong, .block-wishlist-search-results .block-title>strong, .block-reorder .block-title>strong, .block.related .block-title>strong, .block.upsell .block-title>strong, .block.crosssell .block-title>strong, .widget .block-title>strong, .multicheckout .block-title>strong, .paypal-review .block .block-title>strong, .magento-rma-guest-returns .column.main .block:not(.widget) .block-title>strong, [class^=sales-guest-] .column.main .block:not(.widget) .block-title>strong, .sales-guest-view .column.main .block:not(.widget) .block-title>strong, .account .column.main .block:not(.widget) .block-title>strong {
+    color: #3e3e3e;
+    font-weight: 600;
+    line-height: 1.36363636;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+b, strong {
+    font-weight: 700;
+}
+.inset-3 {
+    padding: 3.2% 3.2% 1.5%;
+}
+.bg-secondary {
+    background: #e1e9ed !important;
+}
+.offset-bottom {
+    margin-bottom: 30px;
+}
+
+[class*=col-m-] {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+[class*=col-xs-] {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.product-item .product-reviews-summary, .product-item .price-box, .product-item .product-item-description, .product-item .swatch-attribute, .product-item .actions-primary, .product-item .actions-secondary {
+    margin-top: 10px;
+}
+.product-info-main .price-box .price-including-tax+.price-excluding-tax, .product-info-main .price-box .weee+.price-excluding-tax, .product-info-main .price-box .weee {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+.fotorama-stretch, .fotorama-focus-overlay:after, .fotorama__stage__shaft, .fotorama__stage__frame, .fotorama__html, .fotorama__video iframe {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
