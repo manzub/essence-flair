@@ -121,9 +121,9 @@ function Header({ isDarkMode }) {
           {/* TODO: menus from api */}
           {shop.categories?.map((el, idx) => {
             return(<li key={idx} className="ui-menu-item">
-              <NavLink to={`/shop?m=${el.id}`} className={classNames("ui-menu-link", { 'text-white': isDarkMode })}>
+              <span className={classNames("ui-menu-link", { 'text-white': isDarkMode })}>
                 <span>{el.name}</span>
-              </NavLink>
+              </span>
             </li>)
           })}
         </ul>
