@@ -4,7 +4,7 @@ import Loading from "../components/Loading";
 import Snackbar from "../components/Snackbar";
 import apiBackend from "../utils/apiBackend";
 import { useDispatch, useSelector } from "react-redux";
-import actionTypes from "../redux/types";
+// import actionTypes from "../redux/types";
 import axios from "axios";
 
 window.Buffer = window.Buffer || require("buffer").Buffer;
@@ -19,6 +19,7 @@ function Checkout({ darkMode }) {
   const [creditcard, creditcardform] = React.useState({ cvv: '', number: '', expiry_month: '', expiry_year: '' })
   const [rtuserform, updateRTUserForm] = React.useState({ email: '', password: '' })
   const [billingform, updateBillingForm] = React.useState(defaultBillingForm);
+  // eslint-disable-next-line no-unused-vars
   const [token, setToken] = React.useState(null);
   const [loginType, setlgntype] = React.useState(null);
 
@@ -28,41 +29,41 @@ function Checkout({ darkMode }) {
 
   async function loginUser(e) {
     e.preventDefault();
-    inAsync(true)
-    try {
-      if(rtuserform.email && rtuserform.password) {
-        const user = await apiBackend.signin(rtuserform.email, rtuserform.password);
-        if(user) {
-          dispatch({ type: actionTypes.loginUser, payload: user })
-          inAsync(false)
-          setAlert('User Logged In successfull')
-          setTimeout(() => setAlert(null), 1000);
-        } else throw new Error('Invalid User')
-      }
-    } catch (error) {
-      inAsync(false)
-      setAlert(error.message)
-      setTimeout(() => setAlert(null), 1000);
-    }
+    // inAsync(true)
+    // try {
+    //   if(rtuserform.email && rtuserform.password) {
+    //     const user = await apiBackend.signin(rtuserform.email, rtuserform.password);
+    //     if(user) {
+    //       dispatch({ type: actionTypes.loginUser, payload: user })
+    //       inAsync(false)
+    //       setAlert('User Logged In successfull')
+    //       setTimeout(() => setAlert(null), 1000);
+    //     } else throw new Error('Invalid User')
+    //   }
+    // } catch (error) {
+    //   inAsync(false)
+    //   setAlert(error.message)
+    //   setTimeout(() => setAlert(null), 1000);
+    // }
   }
 
   async function makePayment() {
     inAsync(true)
-    const data = {...creditcard, cvd: creditcard.cvv}
-    axios.post("https://api.na.bambora.com/scripts/tokenization/tokens/", data, {
-      headers: {
-        "Content-Type": "text/plain; application/json"
-      }
-    }).then(response => {
-      setToken(response.data.token)
-      inAsync(false)
-    }).catch(error => {
-      inAsync(false)
-      setAlert(error.message)
-      setTimeout(() => {
-        setAlert(null)
-      }, 2000);
-    })
+    // const data = {...creditcard, cvd: creditcard.cvv}
+    // axios.post("https://api.na.bambora.com/scripts/tokenization/tokens/", data, {
+    //   headers: {
+    //     "Content-Type": "text/plain; application/json"
+    //   }
+    // }).then(response => {
+    //   setToken(response.data.token)
+    //   inAsync(false)
+    // }).catch(error => {
+    //   inAsync(false)
+    //   setAlert(error.message)
+    //   setTimeout(() => {
+    //     setAlert(null)
+    //   }, 2000);
+    // })
   }
 
   React.useEffect(() => {

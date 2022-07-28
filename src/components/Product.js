@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import classNames from 'classnames';
 import actionTypes from "../redux/types";
 import { useDispatch } from "react-redux";
@@ -20,24 +19,25 @@ function Product({ darkMode, item }) {
   return(<li className="item product product-item">
     <div className="product-item-info">
       <div className="product-img">
-        <NavLink to={`/single/${item.id}`} className={"product photo product-item-photo"}>
+        <span  className={"product photo product-item-photo"}>
           <span style={{width:'345px'}} className="product-image-container">
             <span style={{paddingBottom:'125.14124293785%'}} className="product-image-wrapper">
               <img className="product-image-photo" src={item.image} alt={item.name} />
             </span>
           </span>
-        </NavLink>
+        </span>
       </div>
       <div className="product details product-item-details">
         <strong className="product name product-item-name">
-          <NavLink to={`/single/${item.id}`} className={classNames("product-item-link", { "text-white": isDarkMode })}>{item.name}</NavLink>
+          <span className={classNames("product-item-link", { "text-white": isDarkMode })}>{item.name}</span>
         </strong>
         <div className="price-box price-final_price">
           <span className="normal-price">
-            <span className="price-container price-final_price">
+            <span className="price-container price-final_price d-flex justify-content-between align-items-center">
               <span className="price-wrapper">
-                <span className={classNames("price", { 'text-white': isDarkMode })}>N{Intl.NumberFormat('en-Us').format(Math.round(item.price/1000)*1000)}K</span>
+                <span className={classNames("price", { 'text-white': isDarkMode })}>N{Intl.NumberFormat('en-Us').format(item.price*800)}K</span>
               </span>
+              <span className="badge badge-primary text-danger">NEW</span>
             </span>
           </span>
         </div>
@@ -46,11 +46,12 @@ function Product({ darkMode, item }) {
           <div className="product actions product-item-actions">
             <div className="actions-secondary d-flex align-items-center justify-content-evenly">
               {/* add to cart action */}
-              <button onClick={addToCart} className="action tocart">
+              <button onClick={addToCart} className={classNames("d-flex align-items-center btn tocart", {'bg-dark text-white': !isDarkMode})}>
+                Add To Cart
                 <ion-icon name="add-outline"></ion-icon>
               </button>
 
-              <NavLink to={"/single/"+item?.id} className="action btn-secondary rounded-0 btn">Read More</NavLink>
+              {/* <NavLink to={"/single/"+item?.id} className="action btn-secondary rounded-0 btn">Read More</NavLink> */}
             </div>
           </div>
         </div>

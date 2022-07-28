@@ -12,31 +12,21 @@ import { appname } from './utils/constants';
 import Home from './pages/Home';
 import Page404 from './pages/Page404';
 import Header from './components/header/Header';
-import Shop from './pages/Shop';
-import Single from './pages/Single';
-import { connect, useDispatch } from 'react-redux';
-import { useQuery } from 'react-query';
-import apiBackend from './utils/apiBackend';
-import actionTypes from './redux/types';
+import { connect } from 'react-redux';
+// import { useQuery } from 'react-query';
+// import apiBackend from './utils/apiBackend';
+// import actionTypes from './redux/types';
 import Checkout from './pages/Checkout';
 
 
 function App({ loaded }) {
   // TODO: add theme
   const { theme } = React.useContext(ThemeContext)
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const isDarkMode = theme === 'dark';
-
-  const { isLoading } = useQuery('shop', () => {
-    return apiBackend.initShop();
-  }, { onSuccess: function(data) {
-    if(data && data.shop) dispatch({ type: actionTypes.loadShop, payload: data })
-  }, enabled: !loaded })
 
   const routes = [
     { path: '/', element: <Home darkMode={isDarkMode} />, exact: true },
-    { path: '/shop', element: <Shop darkMode={isDarkMode} />, exact: true },
-    { path: '/single/:id', element: <Single darkMode={isDarkMode} />, exact: true },
     { path: '/checkout', element: <Checkout darkMode={isDarkMode} />, exact: true },
   ]
 
@@ -50,7 +40,7 @@ function App({ loaded }) {
           </div>
           <div className='contact'>
             <strong style={{fontWeight:'600'}}>Contact us:</strong>
-            <a href='tel://+23409028459128'>+2349028459128</a>
+            <a href='tel://+2349013944786'>+234 901 394 4786</a>
           </div>
         </div>
       </div>
@@ -70,19 +60,19 @@ function App({ loaded }) {
           <div className="container">
             <div className="copyright">
               <p>© 2022 {appname} All Right Reserved</p>
-              <p>Image credits <a href="apple.com" target="_blank">Apple.com</a></p>
+              <p>Image credits <a href="https://www.chanel.com/us/fragrance/women/c/7x1x1/" target="_blank" rel="noreferrer">Chanel Perfumes</a></p>
             </div>
             <ul className="social-links">
-              <li><a href="#socials" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
-              <li><a href="#socials" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-              <li><a href="#socials" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-              <li><a href="#socials" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100083642448133" target="_blank" rel="noreferrer"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li><a href="https://www.instagram.com/invites/contact/?i=dd3cru05mg5h&utm_content=oyl4q4r" target="_blank" rel="noreferrer"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li><a href="https://vm.tiktok.com/ZMNQvg6AN/" target="_blank" rel="noreferrer"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+              <li><a href="https://twitter.com/EssenceFlair_?t=eB_4gl-yX9O5mOapvIEubA&s=09" target="_blank" rel="noreferrer"><ion-icon name="logo-twitter"></ion-icon></a></li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
-    {(!loaded || isLoading) && <Loading />}
+    {(!loaded) && <Loading />}
   </div>);
 }
 

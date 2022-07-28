@@ -9,7 +9,6 @@ function userReducer(state = {}, action) {
       return state;
   }
 }
-
 function shoppingCart(state = { items: [] }, action) {
   switch (action.type) {
     case actionTypes.addToCart:
@@ -28,14 +27,23 @@ function shoppingCart(state = { items: [] }, action) {
   }
 }
 
-function shopReducer(state = { categories: [], shop: { products: [], pages: null }, loaded: false }, action) {
+const shopState = {
+  categories: [
+    {id:'1',name:'Parfum'},
+    {id: "2", name: "Bath & Shower"},
+    {id: "3", name: "Body Care"},
+    {id: "4", name: "Hair"},
+    {id: "5", name: "Deodorant"}
+  ],
+}
+function shopReducer(state = { ...shopState, shop: { products: [], pages: null } }, action) {
   switch (action.type) {
     case actionTypes.setCategories:
       return {...state, categories: action.payload}
     case actionTypes.loadShop:
       return {...state, ...action.payload, loaded: true}
     default:
-      return state;
+      return {...state, loaded: true};
   }
 }
 
