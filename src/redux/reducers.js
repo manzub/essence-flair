@@ -1,6 +1,6 @@
 const { default: actionTypes } = require("./types");
 
-function userReducer(state = {}, action) {
+export function userReducer(state = {}, action) {
   switch (action.type) {
     case actionTypes.loginUser:
       return { ...state, ...action.payload }
@@ -9,7 +9,7 @@ function userReducer(state = {}, action) {
       return state;
   }
 }
-function shoppingCart(state = { items: [] }, action) {
+export function shoppingCart(state = { items: [] }, action) {
   switch (action.type) {
     case actionTypes.addToCart:
       let arr = [...state.items]
@@ -36,7 +36,7 @@ const shopState = {
     {id: "5", name: "Deodorant"}
   ],
 }
-function shopReducer(state = { ...shopState, shop: { products: [], pages: null } }, action) {
+export function shopReducer(state = { ...shopState, shop: { products: [], pages: null } }, action) {
   switch (action.type) {
     case actionTypes.setCategories:
       return {...state, categories: action.payload}
@@ -45,10 +45,4 @@ function shopReducer(state = { ...shopState, shop: { products: [], pages: null }
     default:
       return {...state, loaded: true};
   }
-}
-
-module.exports = {
-  userReducer,
-  shoppingCart,
-  shopReducer
 }
