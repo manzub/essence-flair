@@ -1,3 +1,5 @@
+import { navigationmenu } from "../utils/constants";
+
 const { default: actionTypes } = require("./types");
 
 export function userReducer(state = {}, action) {
@@ -28,13 +30,7 @@ export function shoppingCart(state = { items: [] }, action) {
 }
 
 const shopState = {
-  categories: [
-    {id:'1',name:'Parfum'},
-    {id: "2", name: "Bath & Shower"},
-    {id: "3", name: "Body Care"},
-    {id: "4", name: "Hair"},
-    {id: "5", name: "Deodorant"}
-  ],
+  categories: [...navigationmenu],
 }
 export function shopReducer(state = { ...shopState, shop: { products: [], pages: null } }, action) {
   switch (action.type) {

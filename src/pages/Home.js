@@ -14,7 +14,7 @@ function Home({ darkMode }) {
           <div className="inset-1 top-seller">
             <h1 className="text-bold text-uppercase">{appname}</h1>
             <div className="d-flex align-items-center justify-content-center">
-              <p style={{ width: '50%' }} className="mt-3 text-center">Lifelong companions for bold, luminous personalities in perpetual movement, each CHANEL fragrance for women is inspired by the world of Mademoiselle and composes its own imaginative and feminine olfactory experience. For a complete beauty ritual, prolong the fragrance trail with other expressions of the scent.</p>
+              <p style={{ width: '50%' }} className="mt-3 text-center">Lifelong companions for bold, luminous personalities in perpetual movement, each product fragrance for women is inspired by the world of Mademoiselle and composes its own imaginative and feminine olfactory experience. For a complete beauty ritual, prolong the fragrance trail with other expressions of the scent.</p>
             </div>
             <NavLink to='/shop' className={classNames('mt-3 action primary', { ' bg-dark text-white': !isDarkMode })}>Shop Now</NavLink>
           </div>
