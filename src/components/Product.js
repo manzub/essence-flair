@@ -35,6 +35,7 @@ function Product({ darkMode, item }) {
           <span className="normal-price">
             <span className="price-container price-final_price d-flex justify-content-between align-items-center">
               <span className="price-wrapper">
+                Starting at:
                 <span className={classNames("price", { 'text-white': isDarkMode })}>N{Intl.NumberFormat('en-Us').format(item.price*800)}K</span>
               </span>
               <span className="badge badge-primary text-danger">NEW</span>

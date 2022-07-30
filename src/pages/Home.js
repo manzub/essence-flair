@@ -38,15 +38,15 @@ function Home({ darkMode }) {
       </div>
       <div className="row mt-4">
         <div className="col-md-4 mb-3">
-          <Product item={{ id: '1', image: 'images/1.jpg', name: 'CHANCE EAU TRENDE', price: 90 }} />
+          <Product item={{ id: '1', image: 'images/14.jpg', name: 'BLACK OPIUM', price: 3.75 }} />
         </div>
         <div className="col-md-4 mb-3">
-          <Product item={{ id: '2', image: 'images/2.jpg', name: 'COCO MADEMOISELLE', price: 95 }} />
+          <Product item={{ id: '2', image: 'images/15.jpg', name: 'SUGAR BABY', price: 3.75 }} />
         </div>
         <div className="col-md-4 mb-3">
-          <Product item={{ id: '3', image: 'images/gabrielle-chanel.jpg', name: 'GABRIELLE CHANEL', price: 1122 }} />
+          <Product item={{ id: '3', image: 'images/16.jpg', name: 'CREED AVENTUS', price: 3.75 }} />
         </div>
-        <div className="col-md-4 mb-3">
+        {/* <div className="col-md-4 mb-3">
           <Product item={{ id: '5', image: 'images/3.jpg', name: 'GABRIELLE CHANEL PERFUME SPRAY', price: 1122 }} />
         </div>
         <div className="col-md-4 mb-3">
@@ -69,7 +69,7 @@ function Home({ darkMode }) {
         </div>
         <div className="col-md-4 mb-3">
           <Product item={{ id: '5', image: 'images/11.webp', name: 'MISS DIOR PERFUME SPRAY', price: 1122 }} />
-        </div>
+        </div> */}
       </div>
     </div>
   </div>)
