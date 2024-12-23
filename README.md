@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# E-Commerce Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An e-commerce web application built with **ReactJS** and **Redux** for a seamless and efficient user experience. The application features a modern user interface, support for both dark and light themes, an intuitive checkout process, and optimized data sorting. The backend is powered by **PHP**, ensuring robust data management and processing.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Interface**: A friendly and responsive UI with light and dark mode support.
+- **Optimized Performance**: Efficient data sorting for faster and smoother interactions.
+- **Easy Checkout**: A simple and intuitive checkout process for users.
+- **Component Documentation**: All components are documented using **Storybook**.
+- **Backend Integration**: A powerful PHP backend to handle data and server-side operations.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://github.com/user-attachments/assets/09361dd3-df73-437b-8a4f-c74dd5022755
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+### Frontend
+- **ReactJS**: For building the user interface.
+- **Redux**: For state management.
+- **Storybook**: For documenting and showcasing UI components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+- **PHP**: For handling server-side operations and APIs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Styling
+- **CSS**: For responsive and dynamic styling.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+### Prerequisites
+- Node.js (v14 or higher)
+- PHP (v7.4 or higher)
+- A MySQL database
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/ecommerce-store.git
+   cd ecommerce-store
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Set up the backend**
+   - Navigate to the `backend` directory.
+   - Configure the database settings in `config.php`.
+   - Import the SQL dump (`database.sql`) into your MySQL database.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Run the frontend**
+   ```bash
+   npm start
+   ```
+   The application will be available at `http://localhost:3000`.
 
-## Learn More
+5. **Run the backend**
+   - Start the PHP server:
+     ```bash
+     php -S localhost:8000 -t backend
+     ```
+   - The backend will be accessible at `http://localhost:8000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Visit the homepage to browse products.
+- Use the theme toggle to switch between dark and light modes.
+- Add products to the cart and proceed to the checkout for a seamless experience.
 
-### Code Splitting
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Storybook
+Run Storybook to view and test components:
+```bash
+npm run storybook
+```
 
-### Analyzing the Bundle Size
+### Build
+To create a production build:
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`feature/my-feature`).
+3. Commit your changes.
+4. Push to your fork and submit a pull request.
